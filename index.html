@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>gradle-scala-application-howto</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/gradle-scala-application-howto/favicon.ico">
+    
+    <link rel="preload" href="/gradle-scala-application-howto/assets/css/0.styles.65fcc07f.css" as="style"><link rel="preload" href="/gradle-scala-application-howto/assets/js/app.35b00b77.js" as="script"><link rel="preload" href="/gradle-scala-application-howto/assets/js/2.48e018a0.js" as="script"><link rel="preload" href="/gradle-scala-application-howto/assets/js/5.590ea0c2.js" as="script"><link rel="prefetch" href="/gradle-scala-application-howto/assets/js/3.2dfbe4d4.js"><link rel="prefetch" href="/gradle-scala-application-howto/assets/js/4.2ca7c99c.js"><link rel="prefetch" href="/gradle-scala-application-howto/assets/js/6.be294db9.js">
+    <link rel="stylesheet" href="/gradle-scala-application-howto/assets/css/0.styles.65fcc07f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/gradle-scala-application-howto/" class="home-link router-link-exact-active router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/daggerok/gradle-scala-application-howto" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/daggerok/gradle-scala-application-howto" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="gradle-scala-application-howto"><a href="#gradle-scala-application-howto" aria-hidden="true" class="header-anchor">#</a> gradle-scala-application-howto</h1> <p>Because I don't know sbt...</p> <p>Travis CI build status: <a href="https://travis-ci.org/daggerok/gradle-scala-application-howto" target="_blank" rel="noopener noreferrer"><img src="https://travis-ci.org/daggerok/gradle-scala-application-howto.svg?branch=master" alt="Build Status"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language-bash extra-class"><pre class="language-bash"><code>./gradlew clean <span class="token function">test</span> npm_i npm_run_build
+</code></pre></div><p></p><div class="table-of-contents"><ul><li><a href="#gradle-init">gradle init</a></li><li><a href="#gradle-fatjar">gradle fatJar</a></li><li><a href="#gradle-tests-output">gradle tests output</a></li><li><a href="#gradle-npm-integration">gradle npm integration</a></li><li><a href="#publish-project-to-github">publish project to GitHub</a></li><li><a href="#travis-ci">Travis CI</a></li></ul></div><p></p> <h2 id="gradle-init"><a href="#gradle-init" aria-hidden="true" class="header-anchor">#</a> gradle init</h2> <p>initialize new <code>scala</code> project:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">mkdir</span> gradle-scala-application-howto
+<span class="token function">cd</span> gradle-scala-application-howto/
+gradle init --type scala-library --package com.github.daggerok --project-name gradle-scala-application-howto --dsl kotlin
+</code></pre></div><h2 id="gradle-fatjar"><a href="#gradle-fatjar" aria-hidden="true" class="header-anchor">#</a> gradle fatJar</h2> <p>add to <code>build.gradle.kts</code> file <code>fatJar</code> task definition:</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code>tasks <span class="token punctuation">{</span>
+    register<span class="token operator">&lt;</span>Jar<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">&quot;fatJar&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        archiveClassifier<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">&quot;all&quot;</span><span class="token punctuation">)</span>
+        duplicatesStrategy <span class="token operator">=</span> DuplicatesStrategy<span class="token punctuation">.</span>EXCLUDE
+        manifest <span class="token punctuation">{</span>
+            <span class="token function">attributes</span><span class="token punctuation">(</span><span class="token string">&quot;Main-Class&quot;</span> <span class="token keyword">to</span> <span class="token string">&quot;com.github.daggerok.Main&quot;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">from</span><span class="token punctuation">(</span>configurations<span class="token punctuation">.</span>runtimeClasspath<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">onEach</span> <span class="token punctuation">{</span> <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;add from dependencies: <span class="token interpolation"><span class="token delimiter variable">${</span>it<span class="token punctuation">.</span>name<span class="token delimiter variable">}</span></span>&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+                <span class="token punctuation">.</span><span class="token function">map</span> <span class="token punctuation">{</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>it<span class="token punctuation">.</span>isDirectory<span class="token punctuation">)</span> it <span class="token keyword">else</span> <span class="token function">zipTree</span><span class="token punctuation">(</span>it<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">val</span> sourcesMain <span class="token operator">=</span> sourceSets<span class="token punctuation">.</span>main<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        sourcesMain<span class="token punctuation">.</span>allSource<span class="token punctuation">.</span><span class="token function">forEach</span> <span class="token punctuation">{</span> <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;add from sources: <span class="token interpolation"><span class="token delimiter variable">${</span>it<span class="token punctuation">.</span>name<span class="token delimiter variable">}</span></span>&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+        <span class="token function">from</span><span class="token punctuation">(</span>sourcesMain<span class="token punctuation">.</span>output<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>then build and run, like so:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>./gradlew clean fatJar
+java -jar build/libs/*-all.jar
+</code></pre></div><h2 id="gradle-tests-output"><a href="#gradle-tests-output" aria-hidden="true" class="header-anchor">#</a> gradle tests output</h2> <p>add to <code>build.gradle.kts</code> file these lines for better developer experience on tests execution:</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token keyword">import</span> org<span class="token punctuation">.</span>gradle<span class="token punctuation">.</span>api<span class="token punctuation">.</span>tasks<span class="token punctuation">.</span>testing<span class="token punctuation">.</span>logging<span class="token punctuation">.</span>TestLogEvent<span class="token punctuation">.</span><span class="token operator">*</span>
+
+tasks <span class="token punctuation">{</span>
+    withType<span class="token operator">&lt;</span>Test<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+        testLogging <span class="token punctuation">{</span>
+            showExceptions <span class="token operator">=</span> <span class="token boolean">true</span>
+            showStandardStreams <span class="token operator">=</span> <span class="token boolean">true</span>
+            <span class="token function">events</span><span class="token punctuation">(</span>PASSED<span class="token punctuation">,</span> SKIPPED<span class="token punctuation">,</span> FAILED<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="gradle-npm-integration"><a href="#gradle-npm-integration" aria-hidden="true" class="header-anchor">#</a> gradle npm integration</h2> <p>add to <code>build.gradle.kts</code> file these lines for better developer experience on tests execution:</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code>plugins <span class="token punctuation">{</span>
+    <span class="token comment">// Add Gradle NodeJS support</span>
+    <span class="token function">id</span><span class="token punctuation">(</span><span class="token string">&quot;com.moowork.node&quot;</span><span class="token punctuation">)</span> version <span class="token string">&quot;1.3.1&quot;</span>
+<span class="token punctuation">}</span>
+
+node <span class="token punctuation">{</span>
+    download <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>prepare everything together with npm scrips and use gradle instead:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>./gradlew npm_i         <span class="token comment"># npm i</span>
+./gradlew npm_run build <span class="token comment"># npm run build</span>
+</code></pre></div><h2 id="publish-project-to-github"><a href="#publish-project-to-github" aria-hidden="true" class="header-anchor">#</a> publish project to GitHub</h2> <p>create <code>.gitignore</code> file:</p> <div class="language-git extra-class"><pre class="language-git"><code>.idea/
+*.iml
+*.ipr
+*.iws
+*.log*
+.gradle/
+build/
+/out/
+.DS_Store
+node_modules/
+.vuepress/dist/
+</code></pre></div><h2 id="travis-ci"><a href="#travis-ci" aria-hidden="true" class="header-anchor">#</a> Travis CI</h2> <p>just see <a href=".travis.yml">.travis.yml</a> file as a the reference...</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">6/17/2019, 9:27:25 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/gradle-scala-application-howto/assets/js/app.35b00b77.js" defer></script><script src="/gradle-scala-application-howto/assets/js/2.48e018a0.js" defer></script><script src="/gradle-scala-application-howto/assets/js/5.590ea0c2.js" defer></script>
+  </body>
+</html>
