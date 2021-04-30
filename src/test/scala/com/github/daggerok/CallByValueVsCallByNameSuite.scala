@@ -4,13 +4,11 @@
 package com.github.daggerok
 
 import org.junit.runner.RunWith
-import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
-
-import scala.annotation.tailrec
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
-class CallByValueVsCallByNameSuite extends FunSuite {
+class CallByValueVsCallByNameSuite extends AnyFunSuite {
   test("should call by value") {
     var res1: Long = 0
     var res2: Long = 0

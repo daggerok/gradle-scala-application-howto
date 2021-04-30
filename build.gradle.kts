@@ -19,16 +19,17 @@ repositories {
 }
 
 dependencies {
-    val scalaVersion = "2.12"
+    val scalaVersion = "2.13"
     // Use Scala 2.12 in our application project
-    implementation("org.scala-lang:scala-library:$scalaVersion.8")
+    implementation("org.scala-lang:scala-library:$scalaVersion.5")
 
     // Use Scalatest for testing our application
-    testImplementation("junit:junit:4.13.2")
-    testImplementation("org.scalatest:scalatest_$scalaVersion:3.0.5")
+    testImplementation("org.scalatestplus:junit-4-13_$scalaVersion:3.2.8.0")
+    testImplementation("org.scalatest:scalatest_$scalaVersion:3.2.8")
+    testImplementation("org.scalatest:scalatest-funsuite_$scalaVersion:3.2.8")
 
     // Need scala-xml at test runtime
-    testRuntimeOnly("org.scala-lang.modules:scala-xml_$scalaVersion:1.1.1")
+    testRuntimeOnly("org.scala-lang.modules:scala-xml_$scalaVersion:1.3.0") // 2.0.0-RC1
 }
 
 tasks {
