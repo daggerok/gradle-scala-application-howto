@@ -114,6 +114,6 @@ just see [.travis.yml](.travis.yml) file as a the reference...
 
 -->
 
-## GitHub action
+## GitHub actions
 
 just see [.github/workflows/ci.yaml file](.github/workflows/ci.yaml) as a the reference...
