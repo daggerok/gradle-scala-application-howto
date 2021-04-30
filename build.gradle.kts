@@ -11,12 +11,11 @@ plugins {
     // Apply the scala plugin to add support for Scala
     scala
     id("com.moowork.node") version "1.3.1"
+    id("com.github.ben-manes.versions") version "0.38.0"
 }
 
 repositories {
-    // Use jcenter for resolving your dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
