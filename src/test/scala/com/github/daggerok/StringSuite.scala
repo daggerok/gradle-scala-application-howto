@@ -35,7 +35,7 @@ class StringSuite extends FunSuite {
   test("should F-interpolate") {
     val two = 123.4567890
     val b = "number"
-    assert("an approximate 123.457 number" == f"an approximate $two%.3f $b%s")
+    assert("an approximate 123,457 number" == f"an approximate $two%3.3f $b%s")
   }
 
   test("should raw-interpolate") {
