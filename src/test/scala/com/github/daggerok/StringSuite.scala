@@ -7,6 +7,8 @@ import org.junit.runner.RunWith
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatestplus.junit.JUnitRunner
 
+import scala.jdk.CollectionConverters.MapHasAsScala
+
 @RunWith(classOf[JUnitRunner])
 class StringSuite extends AnyFunSuite {
   test("scala string should have prepend and append character operation") {
@@ -35,7 +37,14 @@ class StringSuite extends AnyFunSuite {
   test("should F-interpolate") {
     val two = 123.4567890
     val b = "number"
-    assert("an approximate 123,457 number" == f"an approximate $two%3.3f $b%s")
+    // // System.getenv().forEach((k, v) => println(s"${k.toLowerCase.contains("ru")}, ${v.toLowerCase.contains("ru")}, $k => $v"))
+    // System.getProperties.forEach((k, v) => println(s"${k.toString.toLowerCase.contains("ru")}, ${v.toString.toLowerCase.contains("ru")}, $k => $v"))
+    val props = System.getProperties.asScala
+    val lang = props("user.language")
+    if (lang == "ru")
+      assert("an approximate 123,457 number" == f"an approximate $two%3.3f $b%s")
+    else
+      assert("an approximate 123.457 number" == f"an approximate $two%3.3f $b%s")
   }
 
   test("should raw-interpolate") {
