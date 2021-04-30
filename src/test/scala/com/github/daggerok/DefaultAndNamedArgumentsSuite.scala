@@ -3,14 +3,12 @@
  */
 package com.github.daggerok
 
-import org.scalatest.FunSuite
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
-
-import scala.annotation.tailrec
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
-class DefaultAndNamedArgumentsSuite extends FunSuite {
+class DefaultAndNamedArgumentsSuite extends AnyFunSuite {
 
   def greeting(name: String = "Anonymous", age: Int = 0) =
     s"Hey, My name is: $name, and I'm $age years old!"

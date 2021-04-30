@@ -4,11 +4,11 @@
 package com.github.daggerok
 
 import org.junit.runner.RunWith
-import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
-class StringSuite extends FunSuite {
+class StringSuite extends AnyFunSuite {
   test("scala string should have prepend and append character operation") {
     val mid = " n "
     val all = 'o' +: mid :+ 'e'

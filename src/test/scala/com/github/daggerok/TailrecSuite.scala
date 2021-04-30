@@ -3,14 +3,14 @@
  */
 package com.github.daggerok
 
-import org.scalatest.FunSuite
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatestplus.junit.JUnitRunner
 
 import scala.annotation.tailrec
 
 @RunWith(classOf[JUnitRunner])
-class TailrecSuite extends FunSuite {
+class TailrecSuite extends AnyFunSuite {
   test("should concat string n times by using tail recursion") {
     @tailrec
     def concatTimes(str: String, n: Int, acc: String = ""): String =
