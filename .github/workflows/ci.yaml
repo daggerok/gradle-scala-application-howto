@@ -44,8 +44,7 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Deploy maven artifacts locally
-        run: ./gradlew
+      - run: ./gradlew
   github-pages:
     runs-on: ubuntu-latest
     steps:
@@ -68,12 +67,9 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Resolve maven dependencies
-        run: ./mvnw -f docs -B dependency:resolve-plugins dependency:resolve
-      - name: Build vuepress documentation
-        run: ./mvnw -f docs -P ci
+      - run: ./gradlew npm_i npm_run_gh-pages
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: docs/src/.vuepress/dist # The folder the action should deploy.
+          folder: .vuepress/dist # The folder the action should deploy.
