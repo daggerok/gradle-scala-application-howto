@@ -1,4 +1,4 @@
-# gradle-scala-application-howto
+# gradle-scala-application-howto [![gradle-scala-application-howto](https://github.com/daggerok/gradle-scala-application-howto/actions/workflows/ci.yaml/badge.svg)](https://github.com/daggerok/gradle-scala-application-howto/actions/workflows/ci.yaml)
 Because I don't know sbt...
 
 <!--
@@ -6,8 +6,6 @@ Because I don't know sbt...
 Travis CI build status: [![Build Status](https://travis-ci.org/daggerok/gradle-scala-application-howto.svg?branch=master)](https://travis-ci.org/daggerok/gradle-scala-application-howto)
 
 -->
-
-GitHub actions status: [![gradle-scala-application-howto](https://github.com/daggerok/gradle-scala-application-howto/actions/workflows/ci.yaml/badge.svg)](https://github.com/daggerok/gradle-scala-application-howto/actions/workflows/ci.yaml)
 
 ```bash
 ./gradlew clean test npm_i npm_run_build
