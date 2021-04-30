@@ -10,7 +10,7 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent.*
 plugins {
     // Apply the scala plugin to add support for Scala
     scala
-    id("com.moowork.node") version "1.3.1"
+    id("com.github.node-gradle.node") version "3.0.1"
     id("com.github.ben-manes.versions") version "0.38.0"
 }
 
@@ -67,7 +67,7 @@ tasks {
 }
 
 node {
-    download = true
+    download.set(true)
 }
 
 defaultTasks("clean", "test", "fatJar")
