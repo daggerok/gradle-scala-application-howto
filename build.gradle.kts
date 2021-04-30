@@ -24,7 +24,7 @@ dependencies {
     implementation("org.scala-lang:scala-library:$scalaVersion.8")
 
     // Use Scalatest for testing our application
-    testImplementation("junit:junit:4.12")
+    testImplementation("junit:junit:4.13.2")
     testImplementation("org.scalatest:scalatest_$scalaVersion:3.0.5")
 
     // Need scala-xml at test runtime
